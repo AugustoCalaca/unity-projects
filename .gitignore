@@ -1,0 +1,11 @@
+.vscode
+Assembly-CSharp.csproj
+Library
+Logs
+Packages
+ProjectSettings
+Temp
+snake-game.sln
+*.meta
+game2D
+*.unity
