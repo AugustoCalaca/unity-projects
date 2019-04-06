@@ -8,9 +8,6 @@ public class SpawningFood : MonoBehaviour {
   public Transform bottom;
   public Transform left;
   public Transform right;
-  void Start() {
-  
-  }
 
   void Spawn() {
     int x = (int) Random.Range(left.position.x, right.position.x);
@@ -20,7 +17,8 @@ public class SpawningFood : MonoBehaviour {
   }
 
   void OnTriggerEnter2D(Collider2D other) {
-    if(other.gameObject.CompareTag("Head")) {
+    if(other.gameObject.CompareTag("Food")) {
+      Destroy(other.gameObject);  
       Spawn();
     }
   }
